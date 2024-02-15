@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Master:
+  = @detail.master_id
+
+p
+  strong Description:
+  = @detail.description
+
+=> link_to "Edit", edit_detail_path(@detail)
+'|
+=< link_to "Back", details_path

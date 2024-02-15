@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @master.name
+
+p
+  strong Email:
+  = @master.email
+
+=> link_to "Edit", edit_master_path(@master)
+'|
+=< link_to "Back", masters_path

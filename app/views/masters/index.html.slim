@@ -1,0 +1,23 @@
+h1 Listing masters
+
+table
+  thead
+    tr
+      th Name
+      th Email
+      th
+      th
+      th
+
+  tbody
+    - @masters.each do |master|
+      tr
+        td = master.name
+        td = master.email
+        td = link_to "Show", master
+        td = link_to "Edit", edit_master_path(master)
+        td = link_to "Destroy", master, data: {confirm: "Are you sure?"}, method: :delete
+
+br
+
+= link_to "New Master", new_master_path

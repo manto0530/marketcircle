@@ -1,0 +1,23 @@
+h1 Listing details
+
+table
+  thead
+    tr
+      th Master
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @details.each do |detail|
+      tr
+        td = detail.master_id
+        td = detail.description
+        td = link_to "Show", detail
+        td = link_to "Edit", edit_detail_path(detail)
+        td = link_to "Destroy", detail, data: {confirm: "Are you sure?"}, method: :delete
+
+br
+
+= link_to "New Detail", new_detail_path
